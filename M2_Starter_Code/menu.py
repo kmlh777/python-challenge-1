@@ -122,7 +122,7 @@ while place_order:
             # 3. Check if the customer typed a number
                     if menu_item .isdigit(True):
                 # Convert the menu selection to an integer
-                    int(menu_item)
+                      int(menu_item)
 
                 # 4. Check if the menu selection is in the menu items
                     if int(menu_item) in menu_items.keys(True):
@@ -139,28 +139,28 @@ while place_order:
                      order_list.append({'item name': 'banana', 'price': .69, 'quantity': 1})
 
                     # Tell the customer that their input isn't valid
-                    else: print( 'Im sorry that was not a valid selection')
+                    else: print("Im sorry that was not a valid selection")
 
 
                 # Tell the customer they didn't select a menu option
-                    print('you have not selected a menu option')
+                    print(f"{menu_item} You have not selected a menu option")
         else:
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
     else:
         # Tell the customer they didn't select a number
-        print("You didn't select a number.")
+        print(f"{menu_catagory}You didn't select a number.")
 
     while True:
         # Ask the customer if they would like to order anything else
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-
+        if(f'{keep_ordering}yes'):
                 # Keep ordering
-
+        print(f"{menu_item}Please select your next menu item.")      
                 # Exit the keep ordering question loop
-
+    else: break
                 # Complete the order
 
                 # Since the customer decided to stop ordering, thank them for
