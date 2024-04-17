@@ -124,8 +124,11 @@ while place_order:
 
             # 3. Check if the customer typed a number
                     if menu_items .isdigit(True):
+                    else : print("Im sorry that was not a valid selection")  
+
                 # Convert the menu selection to an integer
-                      int(menu_items)
+                
+                    int(menu_items)
 
                 # 4. Check if the menu selection is in the menu items
                     if int(menu_items) in menu_items.keys(True):
@@ -158,7 +161,7 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-    match keep_ordering.lower() == "y":
+    match keep_ordering.lower() == "y","n" :
             # Customer chose yes
             case 'y':
                 # Keep ordering
@@ -193,6 +196,8 @@ for item in order_list:
     item_quantity = item['quantity']
     total_item_cost = item_price * item_quantity
     print(f"{item_name}: {item_quantity} x ${item_price:.2f} = ${total_item_cost:.2f}")
+
+
     # 7. Store the dictionary items as variables
 
 cookie_price = menu['Snacks']['Cookie']    
