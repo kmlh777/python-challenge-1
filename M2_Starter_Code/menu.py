@@ -80,7 +80,11 @@ while place_order:
     menu_category = ("Type menu number choice:" )
 
     # Check if the customer's input is a number
-    if menu_category.isdigit():
+    user_input = input("Enter the quantity: ") 
+    if user_input.isdigit(): quantity = int(user_input) 
+    else: print("Invalid input. Defaulting to 1 item.") 
+    quantity = 1 
+
         # Check if the customer's input is a valid option
         if int(menu_category) in menu_items.keys():
             # Save the menu category name to a variable
@@ -154,21 +158,24 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-    if(f'{keep_ordering}yes'):
+    match keep_ordering.lower():
+            # Customer chose yes
+            case 'y':
                 # Keep ordering
-              print(f"{menu_items}Please select your next menu item.")      
+                place_order = True
                 # Exit the keep ordering question loop
-    else: break
+                break
+            # Customer chose no
+            case 'n':
                 # Complete the order
-
-                # Since the customer decided to stop ordering, thank them for
-                # their order
-    print("Thank you for you order today!")
+                place_order = False
+                # Since the customer decided to stop ordering, thank them for their order
+                print("Thank you for your order.")
                 # Exit the keep ordering question loop
-    break
+                break
 
                 # Tell the customer to try again
-print( "Please try again")
+                print( "Please try again")  
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
