@@ -86,7 +86,7 @@ while place_order:
     quantity = 1 
 
         # Check if the customer's input is a valid option
-        if int(menu_category) in menu_items.keys():
+    if int(menu_category) in menu_items.keys():
             # Save the menu category name to a variable
             menu_category_name = menu[int(menu_category)]
             # Print out the menu category name they selected
@@ -133,7 +133,7 @@ while place_order:
                      menu_item_name = menu_items[int(menu_items)]
 
                     # Ask the customer for the quantity of the menu item
-                    print("How many would you like?")
+                    print("How many would you like?" )
 
                     # Check if the quantity is a number, default to 1 if not
                     if input .isdigit(True):
@@ -147,35 +147,35 @@ while place_order:
 
                 # Tell the customer they didn't select a menu option
                     print(f"{menu_items} You have not selected a menu option")
-        else:
+                        
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
            # Tell the customer they didn't select a number
-    print(f"{menu_items}You didn't select a number.")
+            print(f"{menu_items}You didn't select a number.")
 
     while True:
         # Ask the customer if they would like to order anything else
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-    match keep_ordering.lower():
+    match keep_ordering.lower() == "y":
             # Customer chose yes
             case 'y':
                 # Keep ordering
                 place_order = True
                 # Exit the keep ordering question loop
-                break
+    break
             # Customer chose no
-            case 'n':
+    case 'n':
                 # Complete the order
-                place_order = False
+    place_order = False
                 # Since the customer decided to stop ordering, thank them for their order
-                print("Thank you for your order.")
+    print("Thank you for your order.")
                 # Exit the keep ordering question loop
-                break
+    break
 
                 # Tell the customer to try again
-                print( "Please try again")  
+    print( "Please try again")  
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
